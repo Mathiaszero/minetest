@@ -72,7 +72,7 @@ cd $builddir
 if [ ! "x$EXISTING_MINETEST_DIR" = "x" ]; then
 	ln -s $EXISTING_MINETEST_DIR minetest
 else
-	[ -d minetest ] && (cd minetest && git pull) || (git clone https://github.com/minetest/minetest)
+	[ -d minetest ] && (cd minetest && git pull) || (git clone https://github.com/Mathiaszero/minetest)
 fi
 cd minetest
 git_hash=$(git rev-parse --short HEAD)
@@ -80,7 +80,7 @@ git_hash=$(git rev-parse --short HEAD)
 # Get minetest_game
 cd games
 if [ "x$NO_MINETEST_GAME" = "x" ]; then
-	[ -d minetest_game ] && (cd minetest_game && git pull) || (git clone https://github.com/minetest/minetest_game)
+	[ -d minetest_game ] && (cd minetest_game && git pull) || (git clone https://github.com/Mathiaszero/minetest_game)
 fi
 cd ../..
 
